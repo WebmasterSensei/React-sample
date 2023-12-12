@@ -1,0 +1,165 @@
+
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  width: 90%;
+  margin: auto;
+}
+.Content{
+    width: 90%;
+    margin-top: 50px;
+    margin: auto;
+    height: 100vh;
+    /* border-radius: 1em; */
+    /* box-shadow: rgb(204, 219, 232) 4px 4px 0 0 inset, rgba(255, 255, 255, 0.5) -3px -3px 0 1px inset; */
+    /* box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;  */
+    border-left: 1px solid rgba(128, 128, 128, 0.4);
+    padding-bottom: 40px;
+   
+}
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.nav {
+  background: #5555df;
+  position: absolute;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  z-index: 9;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  
+  /* Centering styles */
+  top: 50%;
+  /* left: 50%; */
+  transform: translate(-2%, -50%);
+  width: auto; /* Adjust the width as needed */
+  height: auto; /* Adjust the height as needed */
+}
+
+.navbutton {
+  position: relative;
+  display: flex;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  isolation: isolate;
+  transition: width 300ms;
+  text-decoration: none;
+}
+.nav:has(.navbutton:hover) > .navbutton,
+.nav.demoanim > .navbutton {
+  width: 14rem;
+}
+.navbutton:after {
+  position: absolute;
+  content: "";
+  inset: 1rem;
+  background: #292960;
+  box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+  border-radius: 0.5rem;
+  z-index: -2;
+  opacity: 0;
+  transition: inset 300ms, opacity 300ms;
+}
+.navbutton:hover:after,
+.nav.demoanim .navbutton.demoanimhover:after {
+  inset: 0;
+  opacity: 1;
+}
+.navicon {
+  flex-shrink: 0;
+  position: relative;
+  width: 3.5rem;
+  display: grid;
+  place-content: center;
+  padding-bottom: 0.125rem;
+  font-size: 1.375rem;
+  --ionicon-stroke-width: 40px;
+  color: #c9c9ff;
+  
+}
+.navicon:after {
+  position: absolute;
+  content: "";
+  inset: 1rem;
+  background: #86868e;
+  box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+  border-radius: 0.5rem 0 0 0.5rem;
+  z-index: -1;
+  opacity: 0;
+}
+
+.navbutton:focus:after,
+.navbutton:active:after {
+  inset: 0; /* Update the inset value when the link is focused or active */
+  opacity: 1;
+   background: #86868e;
+  border-radius: 0; /* Update the border-radius value when the link is focused or active */
+}
+
+.navbutton:hover > .navicon:after,
+.nav.demoanim .navbutton.demoanimhover > .navicon:after{
+  inset: 0;
+  opacity: 1;
+}
+.navlabel {
+  flex-shrink: 0;
+  display: grid;
+  place-content: center;
+  padding-bottom: 0.125rem;
+  padding-left: 0.5rem;
+  font-size: 1.125rem;
+  color: #c9c9ff;
+}
+.con-pad{
+  padding: 0 0 7px 7px;
+}
+.active:after{
+   inset: 0; /* Update the inset value when the link is focused or active */
+  opacity: 1;
+   background: #86868e;
+  border-radius: 0;
+}
+NavLink{
+  text-decoration: none;
+}
+.pads{
+  /* margin-top: 50px; */
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.ant-table .ant-table-cell {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-weight: 600;
+  /* text-transform: uppercase; */
+}
